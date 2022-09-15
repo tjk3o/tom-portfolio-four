@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useTransform, useViewportScroll } from 'framer-motion';
-import { Toggle } from '../Buttons/Toggle';
+import { Toggle } from '../Toggle';
+
+export const HEADER_HEIGHT = 80;
 
 function Header({
   handleSetIsDarkTheme,
@@ -37,7 +39,7 @@ function Header({
         zIndex: 2,
         top: 0,
         width: '100%',
-        height: 80,
+        height: HEADER_HEIGHT,
         backdropFilter: 'blur(4px)',
         backgroundColor: headerColor,
         display: 'flex',
