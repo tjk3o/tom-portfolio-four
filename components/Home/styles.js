@@ -92,8 +92,10 @@ export const CardGrid = styled.div`
 
 export const Footer = styled.footer`
   width: 100%;
+  height: 150px;
   display: flex;
   justify-content: center;
+  align-items: flex-end;
 
   ${mediaQueries.tabletPortraitUp`
     justify-content: flex-end;
@@ -101,7 +103,7 @@ export const Footer = styled.footer`
 `;
 
 export const CreatedBy = styled.span`
-  margin: 0 auto;
+  margin: 20px auto;
   text-align: right;
   ${mediaQueries.tabletLandscapeUp`
     width: 940px;

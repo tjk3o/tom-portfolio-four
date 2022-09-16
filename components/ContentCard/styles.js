@@ -8,22 +8,22 @@ export const CardContainer = styled.div`
   color: white;
   border-radius: 20px;
   overflow: hidden;
-  height: 500px;
+  min-height: 500px;
 
   ${mediaQueries.tabletPortraitUp`
-    height: 330px;
+    min-height: 330px;
   `};
   ${mediaQueries.tabletLargeUp`
-    height: 400px;
+    min-height: 400px;
   `};
   ${mediaQueries.desktopUp`
-    height: 500px;
+    min-height: 500px;
   `};
   ${mediaQueries.desktopLargeUp`
-    height: 500px;
+    min-height: 500px;
   `};
   ${mediaQueries.desktopXLUp`
-    height: 500px;
+    min-height: 500px;
   `};
 `;
 
@@ -40,9 +40,14 @@ export const CardImage = styled.img`
   object-fit: contain;
 `;
 
+export const CardLink = styled.a`
+  text-decoration: underline;
+  font-size: 40px;
+`;
+
 export const CardTextContainer = styled.div`
   width: calc(100% - 60px);
-  margin: 30px;
+  margin: 80px 30px;
   //   TODO use font-size from theme
   font-size: 30px;
   overflow-wrap: anywhere;

@@ -25,27 +25,33 @@ export default function Home() {
     {
       imageURL: '/e8359216c694931167c71c457349e97b-sticker.png',
       number: 1,
-      background: 'grey',
+      background: '#4B4E6D',
     },
     {
+      // TODO add icon links for github, and linkedin
       bodyText:
-        'My name’s Tom. I’m a JavaScript developer based in Hertfordshire. If you’re interested in seeing some of my work then please follow the links below. ',
+        'My name’s Tom. I’m a JavaScript developer based in Hertfordshire. If you’re interested in seeing some of my work then please follow the links below.',
       number: 2,
-      background: '#1f4954',
+      background: '#FE6847',
     },
-    { bodyText: 'enquiries@tomkeogh.co.uk', number: 3, background: 'grey' },
+    { email: 'enquiries@tomkeogh.co.uk', number: 3, background: '#6A8D92' },
     {
       bodyText:
         'Skills: React, HTML, Javascript, Next.js, TypeScript , GraphQL, GitHub flow, Jest, react-testing-library, unit-tests , CSS, styled-components, framer-motion, agile, AMP, Node.js',
       number: 4,
-      background: 'brown',
+      background: '#ABB557',
     },
-    { bodyText: 'Interests: Carpentry, Hiking', number: 5, background: 'grey' },
     {
+      bodyText: 'Interests: Carpentry, Hiking',
+      number: 5,
+      background: '#FBB13C',
+    },
+    {
+      // TODO add "Previous roles" with icons
       bodyText:
-        'Employment: Im currently honing my skills as a JavaScript developer at MADE.com',
+        'Employment: Im currently honing my skills as a JavaScript developer at MADE.com.',
       number: 6,
-      background: 'grey',
+      background: '#E08DAC',
     },
   ];
   return (
@@ -73,8 +79,8 @@ export default function Home() {
                 key={item.number}
                 imageURL={item?.imageURL}
                 background={item.background}
-                title={item?.title}
                 bodyText={item?.bodyText}
+                email={item?.email}
               />
             ))}
           </CardGrid>
