@@ -34,9 +34,19 @@ export default function Home() {
       background: '#1f4954',
     },
     { bodyText: 'enquiries@tomkeogh.co.uk', number: 3, background: 'grey' },
-    { number: 4, background: 'grey' },
-    { number: 5, background: 'grey' },
-    { number: 6, background: 'grey' },
+    {
+      bodyText:
+        'Skills: React, HTML, Javascript, Next.js, TypeScript , GraphQL, GitHub flow, Jest, react-testing-library, unit-tests , CSS, styled-components, framer-motion, agile, AMP, Node.js',
+      number: 4,
+      background: 'brown',
+    },
+    { bodyText: 'Interests: Carpentry, Hiking', number: 5, background: 'grey' },
+    {
+      bodyText:
+        'Employment: Im currently honing my skills as a JavaScript developer at MADE.com',
+      number: 6,
+      background: 'grey',
+    },
   ];
   return (
     <HomeWrapper>
