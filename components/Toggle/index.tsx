@@ -20,7 +20,9 @@ export function Toggle({ isOn, toggleSwitch, showToggleText }: ToggleProps) {
         <Switch layout transition={spring} />
       </SwitchContainer>
 
-      <ToggleText showToggleText={showToggleText}>dark mode</ToggleText>
+      <ToggleText className={showToggleText && 'show-toggle-text'}>
+        dark mode
+      </ToggleText>
     </>
   );
 }

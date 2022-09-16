@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { mediaQueries } from '../../theme';
 import { HEADER_HEIGHT } from '../Header';
 
-export const HomeWrapper = styled.main`
+export const HomeWrapper = styled.div`
   background-color: var(--background-color);
   height: 100vh;
   flex: 1 1 0;
@@ -54,6 +54,33 @@ export const Main = styled.main`
   flex-direction: column;
   align-items: center;
   margin-top: 10px;
+`;
+
+export const CardGrid = styled.div`
+  position: relative;
+  margin: 10px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 10px;
+  width: 100%;
+  ${mediaQueries.tabletLandscapeUp`
+    margin: 0;
+    width: 940px;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+  `};
+  ${mediaQueries.tabletLargeUp`
+    width: 1000px;
+  `};
+  ${mediaQueries.desktopUp`
+    width: 1180px;
+  `};
+  ${mediaQueries.desktopLargeUp`
+    width: 1420px;
+  `};
+  ${mediaQueries.desktopXLUp`
+    width: 1920px;
+  `};
 `;
 
 export const Footer = styled.footer`

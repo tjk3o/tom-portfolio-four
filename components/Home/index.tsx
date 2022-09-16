@@ -1,12 +1,15 @@
 import { useEffect, useState } from 'react';
+import Head from 'next/head';
 import useDarkMode from '../../hooks/useDarkMode';
 import Header from '../Header';
+import ContentCard from '../ContentCard';
 import {
   HomeWrapper,
   HeadingOuterContainer,
   HeadingInnerContainer,
   MainAndFooterContainer,
   Main,
+  CardGrid,
   Footer,
   CreatedBy,
 } from './styles';
@@ -21,6 +24,11 @@ export default function Home() {
   const items = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   return (
     <HomeWrapper>
+      <Head>
+        <title>Tom Keogh | JS dev</title>
+        <meta name='description' content="Tom Keogh's site" />
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
       <Header
         handleSetIsDarkTheme={handleSetIsDarkTheme}
         isDarkTheme={isDarkTheme}
@@ -33,16 +41,11 @@ export default function Home() {
       </HeadingOuterContainer>
       <MainAndFooterContainer>
         <Main>
-          {items.map((item) => (
-            <div
-              style={{
-                height: '400px',
-                width: '100vw',
-                background: 'green',
-                marginBottom: '20px',
-              }}
-            />
-          ))}
+          <CardGrid>
+            {items.map((item) => (
+              <ContentCard key={item} />
+            ))}
+          </CardGrid>
         </Main>
         <Footer>
           <CreatedBy>Created by tjk3o</CreatedBy>

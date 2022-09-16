@@ -31,9 +31,11 @@ export const ToggleText = styled(motion.span)`
   bottom: 5px;
   right: 10px;
   font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.5s;
 
-  ${({ showToggleText }) =>
-    showToggleText
-      ? 'opacity: 1; transition: opacity 0.5s;'
-      : 'opacity: 0; transition: opacity 0.5s;'};
+  .show-toggle-text {
+    opacity: 1;
+    transition: opacity 0.5s;
+  }
 `;

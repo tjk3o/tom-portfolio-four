@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { motion, useTransform, useViewportScroll } from 'framer-motion';
+import { motion, useTransform, useScroll } from 'framer-motion';
 import { Toggle } from '../Toggle';
 
 export const HEADER_HEIGHT = 60;
@@ -14,7 +14,7 @@ function Header({
   showToggleText: boolean;
 }): React.ReactElement {
   const [scrollYOffset, setScrollYOffset] = useState(0);
-  const { scrollY } = useViewportScroll();
+  const { scrollY } = useScroll();
 
   useEffect(() => {
     setScrollYOffset(window?.scrollY);
