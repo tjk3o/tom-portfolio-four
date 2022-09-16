@@ -4,7 +4,7 @@ import { HEADER_HEIGHT } from '../Header';
 
 export const HomeWrapper = styled.div`
   background-color: var(--background-color);
-  height: 100vh;
+  height: 100%;
   flex: 1 1 0;
   display: block;
   margin-top: 80px;
@@ -42,7 +42,7 @@ export const HeadingInnerContainer = styled.div`
 `;
 
 export const MainAndFooterContainer = styled.div`
-  min-height: calc(100vh - ${HEADER_HEIGHT}px);
+  min-height: calc(100% - ${HEADER_HEIGHT}px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -64,7 +64,7 @@ export const CardGrid = styled.div`
   row-gap: 10px;
   width: 90%;
   max-width: 450px;
-  ${mediaQueries.tabletPortraitUp`
+  ${mediaQueries.tabletLandscapeUp`
     margin: 0;
     width: 90%;
     grid-template-columns: 1fr 1fr;

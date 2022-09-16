@@ -42,13 +42,23 @@ export const CardImage = styled.img`
 
 export const CardLink = styled.a`
   text-decoration: underline;
-  font-size: 40px;
 `;
 
 export const CardTextContainer = styled.div`
   width: calc(100% - 60px);
   margin: 80px 30px;
-  //   TODO use font-size from theme
-  font-size: 30px;
   overflow-wrap: anywhere;
+  //   TODO use font-size from theme
+  font-size: 20px;
+  ${mediaQueries.tabletPortraitUp`
+  font-size: 30px;
+`};
+`;
+
+export const IconsWrapper = styled.div`
+  width: 100%;
+  margin: 20px auto;
+  *:first-child {
+    margin-right: 8px;
+  }
 `;

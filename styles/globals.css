@@ -6,6 +6,7 @@
   --color-tertiary: rgb(247, 247, 247, 0.97);
   --color-pink: rgb(255, 170, 183);
   --color-header-background: rgb(247, 247, 247, 1);
+  --color-html-background: white;
 }
 [data-theme='dark'] {
   --color-primary-accent: #9d86e9;
@@ -15,10 +16,14 @@
   --color-tertiary: rgb(24, 24, 24, 0.97);
   --color-pink: pink;
   --color-header-background: rgb(0, 0, 0, 1);
+  --color-html-background: black;
 }
 
 html {
-  background-color: var(--color-header-background);
+  background: linear-gradient(
+    var(--color-header-background),
+    var(--color-html-background)
+  );
 }
 
 body {
@@ -28,6 +33,14 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+html,
+body,
+body > div:first-child,
+div#__next,
+div#__next > div {
+  height: fit-content;
 }
 
 a {

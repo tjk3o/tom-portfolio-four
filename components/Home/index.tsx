@@ -33,6 +33,7 @@ export default function Home() {
         'My name’s Tom. I’m a JavaScript developer based in Hertfordshire. If you’re interested in seeing some of my work then please follow the links below.',
       number: 2,
       background: '#FE6847',
+      hasIcons: true,
     },
     { email: 'enquiries@tomkeogh.co.uk', number: 3, background: '#6A8D92' },
     {
@@ -81,6 +82,7 @@ export default function Home() {
                 background={item.background}
                 bodyText={item?.bodyText}
                 email={item?.email}
+                hasIcons={item?.hasIcons}
               />
             ))}
           </CardGrid>
