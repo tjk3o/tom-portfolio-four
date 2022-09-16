@@ -9,7 +9,6 @@ import {
 } from './styles';
 
 const ContentCard = ({
-  className,
   background,
   imageURL,
   email,
