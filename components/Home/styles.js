@@ -1,16 +1,16 @@
 import styled from 'styled-components';
-import { HEADER_HEIGHT } from '../Header';
 import { mediaQueries } from '../../theme';
+import { HEADER_HEIGHT } from '../Header';
 
 export const HomeWrapper = styled.div`
   background-color: var(--background-color);
-  height: 100vh;
+  height: 100%;
   flex: 1 1 0;
   display: block;
   margin-top: 80px;
 `;
 
-export const HeadingContainer = styled.div`
+export const HeadingOuterContainer = styled.div`
   font-size: 16px;
   color: var(--color-primary);
   background: var(--color-header-background);
@@ -18,7 +18,7 @@ export const HeadingContainer = styled.div`
   width: 100%;
 `;
 
-export const Heading = styled.div`
+export const HeadingInnerContainer = styled.div`
   font-size: 16px;
   margin: 0 auto;
   padding-bottom: 1px;
@@ -42,7 +42,8 @@ export const Heading = styled.div`
 `;
 
 export const MainAndFooterContainer = styled.div`
-  min-height: calc(100vh - ${HEADER_HEIGHT}px);
+  // HERE???
+  min-height: calc(100% - ${HEADER_HEIGHT}px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -56,10 +57,46 @@ export const Main = styled.main`
   margin-top: 10px;
 `;
 
+export const CardGrid = styled.div`
+  position: relative;
+  margin: 10px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 10px;
+  width: 90%;
+  max-width: 450px;
+  ${mediaQueries.tabletLandscapeUp`
+    margin: 0;
+    width: 90%;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    max-width: unset;
+  `};
+  ${mediaQueries.tabletLargeUp`
+    width: 1000px;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    div:nth-child(4n - 2) {
+      grid-column: span 2;
+    }
+  `};
+  ${mediaQueries.desktopUp`
+    width: 1180px;
+  `};
+  ${mediaQueries.desktopLargeUp`
+    width: 1420px;
+  `};
+  ${mediaQueries.desktopXLUp`
+    width: 1920px;
+  `};
+`;
+
 export const Footer = styled.footer`
   width: 100%;
+  height: 150px;
   display: flex;
   justify-content: center;
+  align-items: flex-end;
 
   ${mediaQueries.tabletPortraitUp`
     justify-content: flex-end;
@@ -67,7 +104,7 @@ export const Footer = styled.footer`
 `;
 
 export const CreatedBy = styled.span`
-  margin: 0 auto;
+  margin: 20px auto;
   text-align: right;
   ${mediaQueries.tabletLandscapeUp`
     width: 940px;
