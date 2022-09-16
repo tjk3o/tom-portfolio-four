@@ -21,7 +21,23 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => setShowToggleText(false), 3000);
   }, []);
-  const items = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  const items = [
+    {
+      imageURL: '/e8359216c694931167c71c457349e97b-sticker.png',
+      number: 1,
+      background: 'grey',
+    },
+    {
+      bodyText:
+        'My name’s Tom. I’m a JavaScript developer based in Hertfordshire. If you’re interested in seeing some of my work then please follow the links below. ',
+      number: 2,
+      background: '#1f4954',
+    },
+    { bodyText: 'enquiries@tomkeogh.co.uk', number: 3, background: 'grey' },
+    { number: 4, background: 'grey' },
+    { number: 5, background: 'grey' },
+    { number: 6, background: 'grey' },
+  ];
   return (
     <HomeWrapper>
       <Head>
@@ -43,7 +59,13 @@ export default function Home() {
         <Main>
           <CardGrid>
             {items.map((item) => (
-              <ContentCard key={item} />
+              <ContentCard
+                key={item.number}
+                imageURL={item?.imageURL}
+                background={item.background}
+                title={item?.title}
+                bodyText={item?.bodyText}
+              />
             ))}
           </CardGrid>
         </Main>
