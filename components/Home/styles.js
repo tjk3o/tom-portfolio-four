@@ -62,15 +62,22 @@ export const CardGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 10px;
-  width: 100%;
-  ${mediaQueries.tabletLandscapeUp`
+  width: 90%;
+  max-width: 450px;
+  ${mediaQueries.tabletPortraitUp`
     margin: 0;
-    width: 940px;
+    width: 90%;
     grid-template-columns: 1fr 1fr;
     column-gap: 10px;
+    max-width: unset;
   `};
   ${mediaQueries.tabletLargeUp`
     width: 1000px;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    div:nth-child(4n - 2) {
+      grid-column: span 2;
+    }
   `};
   ${mediaQueries.desktopUp`
     width: 1180px;

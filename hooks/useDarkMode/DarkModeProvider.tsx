@@ -39,6 +39,7 @@ export default function DarkModeProvider({ children }: DarkModeProviderProps) {
   };
 
   const storeUserSetPreference = (preference: string) => {
+    // TODO use navigator.storage instead
     localStorage.setItem('theme', preference);
   };
   const getUserSetPreference = () => {
