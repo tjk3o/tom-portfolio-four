@@ -16,7 +16,6 @@ const ContentCard = ({
   bodyText,
   hasIcons,
 }: {
-  className?: string;
   background: string;
   imageURL?: string;
   email?: string;
@@ -24,7 +23,7 @@ const ContentCard = ({
   hasIcons?: boolean;
 }) => {
   return (
-    <CardContainer className={className} style={{ background }}>
+    <CardContainer style={{ background }}>
       {imageURL && (
         <CardImageContainer>
           <CardImage src={imageURL} />
