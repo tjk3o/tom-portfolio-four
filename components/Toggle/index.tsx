@@ -1,5 +1,4 @@
-import { SwitchContainer, Switch } from './styles';
-import { ToggleText } from './styles';
+import { SwitchContainer, Switch, ToggleText } from './styles';
 
 type ToggleProps = {
   isOn: boolean;

@@ -42,6 +42,7 @@ export const HeadingInnerContainer = styled.div`
 `;
 
 export const MainAndFooterContainer = styled.div`
+  // HERE???
   min-height: calc(100% - ${HEADER_HEIGHT}px);
   display: flex;
   flex-direction: column;

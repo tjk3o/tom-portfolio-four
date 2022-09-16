@@ -39,7 +39,7 @@ function Header({
         zIndex: 2,
         top: 0,
         width: '100%',
-        height: 80,
+        height: HEADER_HEIGHT,
         backdropFilter: 'blur(4px)',
         backgroundColor: headerColor,
         display: 'flex',
