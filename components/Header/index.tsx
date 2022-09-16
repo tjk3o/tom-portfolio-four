@@ -30,8 +30,8 @@ function Header({
     ]
   );
 
-  const threshold = scrollY === 0 ? scrollYOffset : scrollY;
-  const headerTitleOpacity = useTransform(threshold, [58, 59], ['0%', '100%']);
+  const headerTitleOpacity = useTransform(scrollY, [58, 59], ['0%', '100%']);
+
   return (
     <motion.header
       style={{
