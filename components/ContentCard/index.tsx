@@ -15,6 +15,13 @@ const ContentCard = ({
   email,
   bodyText,
   hasIcons,
+}: {
+  className?: string;
+  background: string;
+  imageURL?: string;
+  email?: string;
+  bodyText?: string;
+  hasIcons?: boolean;
 }) => {
   return (
     <CardContainer className={className} style={{ background }}>
