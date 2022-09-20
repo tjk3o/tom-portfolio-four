@@ -8,11 +8,7 @@ export const CardContainer = styled.div`
   color: white;
   border-radius: 20px;
   overflow: hidden;
-  min-height: 500px;
 
-  ${mediaQueries.tabletPortraitUp`
-    min-height: 330px;
-  `};
   ${mediaQueries.tabletLargeUp`
     min-height: 400px;
   `};
@@ -50,7 +46,7 @@ export const CardTextContainer = styled.div`
   overflow-wrap: anywhere;
   //   TODO use font-size from theme
   font-size: 20px;
-  ${mediaQueries.tabletPortraitUp`
+  ${mediaQueries.tabletLandscapeUp`
   font-size: 30px;
 `};
 `;
