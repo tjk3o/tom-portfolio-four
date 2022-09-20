@@ -38,7 +38,7 @@ export default function Home() {
     { email: 'enquiries@tomkeogh.co.uk', number: 3, background: '#6A8D92' },
     {
       bodyText:
-        'Skills: React, HTML, Javascript, Next.js, TypeScript , GraphQL, GitHub flow, Jest, react-testing-library, unit-tests , CSS, styled-components, framer-motion, agile, AMP, Node.js',
+        'Skills: React, HTML, Javascript, Next.js, TypeScript, GraphQL, GitHub flow, Jest, react-testing-library, unit-tests , CSS, styled-components, framer-motion, agile, AMP, Node.js',
       number: 4,
       background: '#ABB557',
     },
