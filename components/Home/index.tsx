@@ -38,12 +38,12 @@ export default function Home() {
     { email: 'enquiries@tomkeogh.co.uk', number: 3, background: '#6A8D92' },
     {
       bodyText:
-        'Skills: React, HTML, Javascript, Next.js, TypeScript, GraphQL, GitHub flow, Jest, react-testing-library, unit-tests , CSS, styled-components, framer-motion, agile, AMP, Node.js',
+        'Skills: React, JavaScript, HTML, CSS, Next.js, TypeScript , Storybook, Styled Components, Framer Motion, GitHub, GraphQL, React Testing Library, Jest, Agile, Google Optimize, Google Analytics, Google Tag Manager',
       number: 4,
       background: '#ABB557',
     },
     {
-      bodyText: 'Interests: Carpentry, Hiking',
+      bodyText: 'Interests: Carpentry, Hiking, Running, Guitar',
       number: 5,
       background: '#FBB13C',
     },
@@ -60,6 +60,7 @@ export default function Home() {
       <Head>
         <title>Tom Keogh | JS dev</title>
         <meta name='description' content="Tom Keogh's site" />
+        <meta name='theme-color' content='--header-background-color' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Header

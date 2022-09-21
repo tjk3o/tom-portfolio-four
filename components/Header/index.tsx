@@ -26,7 +26,7 @@ function Header({
     [
       'var(--color-header-background)',
       'var(--color-header-background)',
-      'var(--color-tertiary)',
+      'var(--color-header-background)',
     ]
   );
 
