@@ -8,10 +8,12 @@ export const CardContainer = styled.div`
   color: white;
   border-radius: 20px;
   overflow: hidden;
-  min-height: 500px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
 
   ${mediaQueries.tabletPortraitUp`
-    min-height: 330px;
+    height: 100%;
   `};
   ${mediaQueries.tabletLargeUp`
     min-height: 400px;
@@ -31,13 +33,18 @@ export const CardImageContainer = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
+  justify-content: center;
 `;
 
 export const CardImage = styled.img`
-  margin: 40px;
-  width: calc(100% - 80px);
+  width: 80%;
   max-height: 100%;
   object-fit: contain;
+
+  ${mediaQueries.tabletLargeUp`
+  margin: 40px;
+  width: calc(100% - 80px);
+`};
 `;
 
 export const CardLink = styled.a`
@@ -50,7 +57,7 @@ export const CardTextContainer = styled.div`
   overflow-wrap: anywhere;
   //   TODO use font-size from theme
   font-size: 20px;
-  ${mediaQueries.tabletPortraitUp`
+  ${mediaQueries.tabletLandscapeUp`
   font-size: 30px;
 `};
 `;

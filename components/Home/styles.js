@@ -64,10 +64,10 @@ export const CardGrid = styled.div`
   grid-template-columns: 1fr;
   row-gap: 10px;
   width: 90%;
-  max-width: 450px;
-  ${mediaQueries.tabletLandscapeUp`
+  max-width: 520px;
+  ${mediaQueries.tabletPortraitUp`
     margin: 0;
-    width: 90%;
+    width: 95%;
     grid-template-columns: 1fr 1fr;
     column-gap: 10px;
     max-width: unset;
