@@ -80,10 +80,12 @@ export const Pill = styled.div`
 
 export const LargeBodyContainer = styled.div`
   width: calc(100% - 60px);
-  margin-bottom: 70px;
   overflow-wrap: anywhere;
   //   TODO use font-size from theme
   font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   ${mediaQueries.tabletLandscapeUp`
     font-size: 32px;
@@ -98,10 +100,48 @@ export const SmallBodyContainer = styled.div`
 `;
 
 export const IconsWrapper = styled.div`
-  width: 100%;
-  margin: 20px auto;
+  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.25));
+  margin: 40px 0 20px;
+  display: flex;
+  flex-wrap: wrap;
 
-  *:first-child {
-    margin-right: 8px;
+  > * {
+    margin-right: 40px;
   }
+
+  ${mediaQueries.desktopUp`
+  margin: 70px 0 0;
+
+`};
+`;
+
+export const LinkText = styled.div`
+  font-family: 'DM Mono';
+  font-size: 12px;
+  line-height: 8px;
+  height: 30px;
+
+  ${mediaQueries.desktopUp`
+    font-size: 20px;
+    line-height: 16px;
+    height: unset;
+  `};
+`;
+
+export const LinkArrow = styled.div`
+  width: 10px;
+  height: 10px;
+  margin-left: 8px;
+
+  border-top: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
+`;
+
+export const LinkArrowLine = styled.div`
+  width: 1px;
+  height: 12px;
+  margin: -2px auto;
+
+  border-right: 2px solid #ffffff;
+  transform: rotate(45deg);
 `;
