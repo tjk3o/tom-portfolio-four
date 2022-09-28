@@ -21,20 +21,20 @@ export const SwitchContainer = styled.div`
 export const Switch = styled(motion.div)`
   width: 24px;
   height: 24px;
-  background-color: var(--color-tertiary);
+  background-color: var(--color-html-background);
   border-radius: 50%;
 `;
 
 export const ToggleText = styled(motion.span)`
   color: var(--color-primary);
   position: fixed;
-  bottom: 5px;
+  bottom: 1px;
   right: 10px;
   font-size: 12px;
   opacity: 0;
   transition: opacity 0.5s;
 
-  .show-toggle-text {
+  &.show-toggle-text {
     opacity: 1;
     transition: opacity 0.5s;
   }

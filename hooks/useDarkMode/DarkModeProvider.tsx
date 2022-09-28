@@ -62,15 +62,9 @@ export default function DarkModeProvider({ children }: DarkModeProviderProps) {
       if (isDarkTheme) {
         root.setAttribute('data-theme', 'dark');
         storeUserSetPreference('dark');
-        document
-          .querySelector('meta[name="theme-color"]')
-          .setAttribute('content', '#000000');
       } else {
         root.removeAttribute('data-theme');
         storeUserSetPreference('light');
-        document
-          .querySelector('meta[name="theme-color"]')
-          .setAttribute('content', '#f7f7f7');
       }
     }
   }, [isDarkTheme]);

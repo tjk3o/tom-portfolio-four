@@ -20,7 +20,7 @@ export function Toggle({ isOn, toggleSwitch, showToggleText }: ToggleProps) {
       </SwitchContainer>
 
       <ToggleText className={showToggleText && 'show-toggle-text'}>
-        dark mode
+        Dark mode
       </ToggleText>
     </>
   );
