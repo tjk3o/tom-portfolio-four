@@ -1,43 +1,59 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import {
   CardContainer,
+  LargeHeading,
+  SmallHeading,
   CardImageContainer,
   CardImage,
-  CardLink,
-  CardTextContainer,
+  PillContainer,
+  Pill,
+  LargeBodyContainer,
+  SmallBodyContainer,
   IconsWrapper,
 } from './styles';
 
 const ContentCard = ({
   background,
   imageURL,
-  email,
-  bodyText,
+  largeHeading,
+  smallHeading,
+  largeBody,
+  smallBody,
   hasIcons,
+  pillItems,
 }: {
   background: string;
   imageURL?: string;
-  email?: string;
-  bodyText?: string;
+  largeHeading?: string;
+  smallHeading?: string;
+  largeBody?: string;
+  smallBody?: string;
   hasIcons?: boolean;
+  pillItems?: Array<string>;
 }) => {
   return (
     <CardContainer style={{ background }}>
+      {largeHeading && <LargeHeading>{largeHeading}</LargeHeading>}
+      {smallHeading && (
+        <SmallHeading>{smallHeading.toUpperCase()}</SmallHeading>
+      )}
       {imageURL && (
         <CardImageContainer>
           <CardImage src={imageURL} />
         </CardImageContainer>
       )}
-      {email && (
-        <CardTextContainer>
-          <CardLink href='mailto:enquiries@tomkeogh.co.uk'>
-            enquiries@tomkeogh.co.uk
-          </CardLink>
-        </CardTextContainer>
+      {pillItems && (
+        <>
+          <PillContainer>
+            {pillItems.map((skill) => {
+              return <Pill>{skill}</Pill>;
+            })}
+          </PillContainer>
+        </>
       )}
-      {bodyText && (
-        <CardTextContainer>
-          {bodyText}
+      {largeBody && (
+        <LargeBodyContainer>
+          {largeBody}
           {hasIcons && (
             <IconsWrapper>
               {/* TODO use theme colors */}
@@ -57,8 +73,9 @@ const ContentCard = ({
               </a>
             </IconsWrapper>
           )}
-        </CardTextContainer>
+        </LargeBodyContainer>
       )}
+      {smallBody && <SmallBodyContainer>{smallBody}</SmallBodyContainer>}
     </CardContainer>
   );
 };

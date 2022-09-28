@@ -13,21 +13,12 @@ function Header({
   isDarkTheme: boolean;
   showToggleText: boolean;
 }): React.ReactElement {
-  const [scrollYOffset, setScrollYOffset] = useState(0);
   const { scrollY } = useScroll();
-
-  useEffect(() => {
-    setScrollYOffset(window?.scrollY);
-  }, []);
 
   const headerColor = useTransform(
     scrollY,
-    [0, 120, 130],
-    [
-      'var(--color-header-background)',
-      'var(--color-header-background)',
-      'var(--color-header-background)',
-    ]
+    [0, 130],
+    ['var(--color-header-background)', 'var(--color-header-background)']
   );
 
   const headerTitleOpacity = useTransform(scrollY, [58, 59], ['0%', '100%']);
@@ -56,7 +47,7 @@ function Header({
           fontSize: '16px',
         }}
       >
-        Tom Keogh
+        Profile
       </motion.h1>
       <Toggle
         isOn={isDarkTheme}
