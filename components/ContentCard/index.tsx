@@ -10,6 +10,9 @@ import {
   LargeBodyContainer,
   SmallBodyContainer,
   IconsWrapper,
+  LinkText,
+  LinkArrow,
+  LinkArrowLine,
 } from './styles';
 
 const ContentCard = ({
@@ -45,8 +48,8 @@ const ContentCard = ({
       {pillItems && (
         <>
           <PillContainer>
-            {pillItems.map((skill) => {
-              return <Pill>{skill}</Pill>;
+            {pillItems.map((skill, i) => {
+              return <Pill key={i}>{skill}</Pill>;
             })}
           </PillContainer>
         </>
@@ -58,18 +61,42 @@ const ContentCard = ({
             <IconsWrapper>
               {/* TODO use theme colors */}
               <a
+                rel='noopener noreferrer'
+                href='mailto:enquiries@tomkeogh.co.uk'
+                style={{
+                  display: 'flex',
+                }}
+              >
+                <LinkText>enquiries@tomkeogh.co.uk</LinkText>
+                <LinkArrow>
+                  <LinkArrowLine />
+                </LinkArrow>
+              </a>
+              <a
                 target='_blank'
                 rel='noopener noreferrer'
                 href='https://github.com/tjk3o'
+                style={{
+                  display: 'flex',
+                }}
               >
-                <FaGithub color={'white'} size='35px' />
+                <LinkText>GitHub</LinkText>
+                <LinkArrow>
+                  <LinkArrowLine />
+                </LinkArrow>
               </a>
               <a
                 target='_blank'
                 rel='noopener noreferrer'
                 href='https://www.linkedin.com/in/tjkeogh/'
+                style={{
+                  display: 'flex',
+                }}
               >
-                <FaLinkedin color={'white'} size='35px' />
+                <LinkText>LinkedIn</LinkText>
+                <LinkArrow>
+                  <LinkArrowLine />
+                </LinkArrow>
               </a>
             </IconsWrapper>
           )}
