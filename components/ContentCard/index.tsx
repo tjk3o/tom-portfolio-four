@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import {
   CardContainer,
   LargeHeading,
@@ -34,6 +35,7 @@ const ContentCard = ({
   pillItems?: Array<string>;
 }) => {
   return (
+    <Link href="/card-details">
     <CardContainer style={{ background }}>
       {largeHeading && <LargeHeading>{largeHeading}</LargeHeading>}
       {smallHeading && (
@@ -103,6 +105,8 @@ const ContentCard = ({
       )}
       {smallBody && <SmallBodyContainer>{smallBody}</SmallBodyContainer>}
     </CardContainer>
+    </Link>
+
   );
 };
 export default ContentCard;

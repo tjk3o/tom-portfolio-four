@@ -26,20 +26,20 @@ export default function Home() {
     {
       imageURL: '/e8359216c694931167c71c457349e97b-sticker.png',
       number: 1,
-      background: 'linear-gradient(140.16deg, #073653 2.05%, #00072C 100%);',
+      background: 'linear-gradient(140.16deg, #073653 2.05%, #00072C 100%)',
     },
     {
       largeHeading: 'Hi I’m Tom,',
       largeBody:
         'I’m a JavaScript developer based in Hertfordshire. If you’re interested in seeing some of my work then please follow the links below.',
       number: 2,
-      background: 'linear-gradient(105.7deg, #FEB80A 0%, #EB8D00 100%);',
+      background: 'linear-gradient(105.7deg, #FEB80A 0%, #EB8D00 100%)',
       hasIcons: true,
     },
     {
       smallHeading: 'Skills',
       number: 3,
-      background: 'linear-gradient(138.86deg, #C280D2 0%, #8F56BC 100%);',
+      background: 'linear-gradient(138.86deg, #C280D2 0%, #8F56BC 100%)',
       pillItems: [
         'React',
         'JavaScript',
@@ -66,13 +66,13 @@ export default function Home() {
       smallBody:
         'Im currently honing my skills as a JavaScript developer at MADE.com.',
       number: 4,
-      background: 'linear-gradient(138.86deg, #4C90F2 0%, #4B3DE9 100%);',
+      background: 'linear-gradient(138.86deg, #4C90F2 0%, #4B3DE9 100%)',
     },
     {
       smallHeading: 'Interests',
       pillItems: ['Carpentry', 'Hiking', 'Running', 'Guitar'],
       number: 5,
-      background: 'linear-gradient(138.86deg, #FD7E41 0%, #F25432 100%);',
+      background: 'linear-gradient(138.86deg, #FD7E41 0%, #F25432 100%)',
     },
   ];
 
